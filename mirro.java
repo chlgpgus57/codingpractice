@@ -44,10 +44,10 @@ public class mirro {
 							if(nx<0||nx>=n||ny<0||ny>=m) {
 								continue;
 							}
-							if(map[nx][ny]!=0&&!vi[nx][ny]) {
-								vi[nx][ny]=true;
-								map[nx][ny]=map[x.x][x.y]+1;
-								Point p = new Point(nx,ny);
+							if(map[nx][ny]!=0&&!vi[nx][ny]) { //길이면서 방문하지 않았으면
+								vi[nx][ny]=true; //방문처리하고
+								map[nx][ny]=map[x.x][x.y]+1; //새 노드에 현재 노드+1을 해준다
+								Point p = new Point(nx,ny); //새노드를 큐에 넣어준다
 								q.add(p);
 							}	
 						}
